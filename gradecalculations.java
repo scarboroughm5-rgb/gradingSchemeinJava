@@ -46,8 +46,39 @@ public class gradecalculations{
 }
 
 
-   public static String convertingtoLetterGrade(double numericGrade){
-      if ( 
+   public static String convertingtoLetterGrade(double LetterGrade){
+      if (LetterGrade >= 90){
+	return "A";
+      } else if (LetterGrade >= 80){
+	return "B";
+      } else if (LetterGrade >= 70{
+	return "C";
+      } else if (LetterGrade >= 60{
+	return "D";
+      } else {
+	return "F";
+    }
+}
+
+
+  public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+
+	System.out.println("Please enter your assignment score: "):
+	double A = scanner.nextDouble(); // w3Schools
+
+	System.out.println("Please enter your test score: ");
+	double T = scanner.nextDouble();
+
+	System.out.println("Please enter your midterm grade: ");
+	double M = scanner.nextDouble();
+
+	System.out.println("Please enter your final exam: ");
+	double F = scanner.nextDouble();
+
+	//Calculate grade
+	Double E = CalE
+
 
 
    public static void main(String[] args)
