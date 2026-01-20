@@ -24,7 +24,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSCI271_Assignment1_MatthewScarborough_W30658672{
-
+/************************CalAverage***********************\
+* Description: this fucntion is to take the calculate the averages of assignments and test
+*
+* Parameters: Scores
+* 
+* pre: Must have multiple data entries that requires the average of the item
+*
+* post: the average of the item
+*
+* Returns: The average by dividing the sum by the length of the arry scores
+*
+*Called by: A, T
+*Calls: scores
+***********************************************************************/
     public static double CalAverage(double[] scores){
         double sum = 0; //  sum of scores for averages
         for(double score : scores){ //  for  loops until everying in the array has been added.
@@ -33,10 +46,39 @@ public class CSCI271_Assignment1_MatthewScarborough_W30658672{
         return sum / scores.length; // returns the total sum divided by the length of the array scores
     }
 
+/*********************CalculateE************************
+* description: This calculates the exams based on the equation in the  sylabus
+*
+* Parameters: F, M, T
+*
+* Pre: must requires the calculated total of the exams. And F, M, T must be completed
+*
+* Post: everything will be true
+*
+* Returns: It will return the calculated exams.
+*
+* Called by: E
+* Calles: F, M, T
+*/
+
     public static double calculateE(double F, double M, double T){
         return ((0.4 * F + 0.2 * M + 0.1 * T) / 0.7); // returns the calculation from equation E from the sylabus
     }
     
+/**************************CalculateG****************
+* description: This calculated the final grade based on the equation given by the sylubuss
+*
+* parameters: F, M, T, A
+*
+* pre F, M, T, A must contained intergers 
+*
+* post how the final grade is graded.
+*
+* Returns: E, returns the weigth of exams plus assignments.
+*
+* calls by G
+* calls: E
+*/
     public static double calculateG(double F, double M, double T, double A){
         double E = calculateE(F, M, T); // brings E into this function so that final equation for G can be done properly
         
@@ -49,20 +91,49 @@ public class CSCI271_Assignment1_MatthewScarborough_W30658672{
             return 0.7 * E + 0.3 * A; // returns the weight of exams by 70%  plus 30% weight of assignments. 
         }
     }
-
+/************************Lettergrade***************
+* Description: give letter grade based on the E
+*
+*
+* Parameters: Grade 
+*
+* Pre the paramter must be a grade 
+*
+* Post the grade it gives out 
+*
+* Returns A,B,C,D,F
+*
+* Called by: a print statment
+* Calls: grade
+**************************************************/
     public static String lettergrade(double grade){
-        if (grade >= 90){
-            return "A";
-        } else if (grade >= 80){
-            return "B";
-        } else if (grade >= 70){
-            return "C";
-        } else if (grade >= 60){
-            return "D";
-        } else {
-            return "F";
+        if (grade >= 90){ // checks to see if grade is 90 
+            return "A"; // returns the letter A
+        } else if (grade >= 80){ // check to see if grade is less than or grader than 80
+            return "B";// returns B
+        } else if (grade >= 70){ // checks to see if grade is less than or equal to 70
+            return "C"; // returns C
+        } else if (grade >= 60){ // checks to see if grade is less than or equal to 70
+            return "D"; //returns D
+        } else {  // if grade is less than 60
+            return "F"; // returns F 
         }
     }
+
+/**************************Main***********************8
+* Description: the Main fucntion of the file
+*
+* Parameters: arguments and Strings 
+*
+* Pre: it the main so idk
+*
+* Post: everything is true 
+*
+* Returns: there are no returns
+*
+* called by no one 
+* calls: no one
+*/
 
     public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -94,7 +165,7 @@ public class CSCI271_Assignment1_MatthewScarborough_W30658672{
         double F = scanner.nextDouble();
 
         double G = calculateG(F, M, T, A);
-        System.out.printf("Final numerical grade: %.2f%n", G); 
+        System.out.printf("Final numerical grade: %.2f%n", G);// W2schools 
         System.out.println("Final letter grade: " + lettergrade(G));
         
     }
