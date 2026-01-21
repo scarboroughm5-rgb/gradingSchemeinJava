@@ -120,7 +120,7 @@ public class CSCI271_Assignment1_MatthewScarborough_W30658672{
         }
     }
 
-/**************************Main***********************8
+/**************************Main************************
 * Description: the Main fucntion of the file
 *
 * Parameters: arguments and Strings 
@@ -133,40 +133,40 @@ public class CSCI271_Assignment1_MatthewScarborough_W30658672{
 *
 * called by no one 
 * calls: no one
-*/
+*******************************************************/
 
     public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter 7 assignement scores from 0 to 100: ");
-        double [] assignmentScores = new double[7];
+        double [] assignmentScores = new double[7]; // sets the array to hold 7 values
         for (int i = 0; i < 7; i++){
-            System.out.print ("assignment " + (i + 1) + ": ");
-            assignmentScores[i] = scanner.nextDouble();
+            System.out.print ("assignment " + (i + 1) + ": "); // displays assigment 1 and iterates until 7 
+            assignmentScores[i] = scanner.nextDouble(); // gets the next value of the scanner as a double W3schools 
         }
 
-        double A = CalAverage(assignmentScores);
-        System.out.println("Average assignment score: " + A);
+        double A = CalAverage(assignmentScores); // calles the CalAverages function to get the average for assignments 
+        System.out.println("Average assignment score: " + A); // prints the assignments avverages
 
-        System.out.println("Enter test score out of 100: ");
-        double [] testScores = new double[7];
-        for (int i = 0; i < 7; i++){
-            System.out.print ("test " + (i + 1) + ": ");
-            testScores[i] = scanner.nextDouble();
+        System.out.println("Enter test score out of 100: "); // prompots user to enter there score out of 100
+        double [] testScores = new double[7]; // sets the array for test scores to hold 7 values
+        for (int i = 0; i < 7; i++){ 
+            System.out.print ("test " + (i + 1) + ": "); // displays test 1 to 7 
+            testScores[i] = scanner.nextDouble(); // gets the next value of the scanner as a double W3schools 
         }
 
-        double T = CalAverage(testScores);
-        System.out.println("Average test score: " + T);
+        double T = CalAverage(testScores); // call the CalAverage function to get the average of test scores 
+        System.out.println("Average test score: " + T); // prints out the average of test scores. 
 
-        System.out.println("Enter midterm exams score out of 100: ");
-        double M = scanner.nextDouble();
+        System.out.println("Enter midterm exams score out of 100: ");//  asks the users for their midterm scores
+        double M = scanner.nextDouble(); // gets the next value of the scanner as a double
 
-        System.out.println("Enter final exam score out of 100: ");
-        double F = scanner.nextDouble();
+        System.out.println("Enter final exam score out of 100: "); // prompts the user to enter there final exam grade 
+        double F = scanner.nextDouble(); // gets the next value of the scanner as a double 
 
-        double G = calculateG(F, M, T, A);
-        System.out.printf("Final numerical grade: %.2f%n", G);// W2schools 
-        System.out.println("Final letter grade: " + lettergrade(G));
+        double G = calculateG(F, M, T, A); // calls the cacluateG function to get the final grade.
+        System.out.printf("Final numerical grade: %.2f%n", G);// prints the final scores as a double with 2 digits after the decimal
+        System.out.println("Final letter grade: " + lettergrade(G));// prints the final grade letter by calling the letter grade funciton.
         
     }
 }
