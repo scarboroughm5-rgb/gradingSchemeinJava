@@ -19,9 +19,9 @@ Matthew Scarborough
 W30658672
 */
 
-import java.util.Scanner; 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner; // last week fridays teacher assistant powerpoint 
+import java.util.ArrayList; // W3 schools java
+import java.util.List; // W3schools java
 
 public class CSCI271_Assignment1_MatthewScarborough_W30658672{
 /************************CalAverage***********************\
@@ -135,8 +135,8 @@ public class CSCI271_Assignment1_MatthewScarborough_W30658672{
 * calls: no one
 *******************************************************/
 
-    public static void main (String[] args){
-        Scanner scanner = new Scanner(System.in);
+    public static void main (String[] args){ // the main function
+        Scanner scanner = new Scanner(System.in); // scans for input from terminal
 
         System.out.println("Enter 7 assignement scores from 0 to 100: ");
         double [] assignmentScores = new double[7]; // sets the array to hold 7 values
